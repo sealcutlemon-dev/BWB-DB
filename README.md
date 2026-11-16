@@ -37,7 +37,7 @@ convert non-comment lines directly into `Require not ip` rules for instant block
 ### bash
 
 ```bash
-curl -sL https://github.com | sed -e '/^#/d' -e '/^$/d' -e 's/^/Require not ip /'
+curl -sL https://raw.githubusercontent.com/sealcutlemon-dev/BWB-DB/refs/heads/main/evil-web-bots-db.txt | sed -e '/^#/d' -e '/^$/d' -e 's/^/Require not ip /'
 ```
 
 ### powershell
