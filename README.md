@@ -11,7 +11,7 @@ A curated, **frequently updated** threat-intelligence database containing IP add
 
 ### curl
 ```bash
-curl -s https://xxex-27.site | grep -v '^#'
+curl -sL -o evil-web-bots-db.txt https://github.com
 ```
 
 ### (`.htaccess`)
