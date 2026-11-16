@@ -22,6 +22,9 @@ curl -s https://raw.githubusercontent.com/sealcutlemon-dev/BWB-DB/refs/heads/mai
 curl -s https://raw.githubusercontent.com/sealcutlemon-dev/BWB-DB/refs/heads/main/evil-web-bots-db.txt | findstr /V /B "#"
 ```
 
+
+# powershell
+
 ```powershell
 ((iwr -Uri "https://raw.githubusercontent.com/sealcutlemon-dev/BWB-DB/refs/heads/main/evil-web-bots-db.txt" -UseBasicParsing).Content -split "`r?`n") | Where-Object { $_ -and $_ -notmatch '^#' }
 ```
@@ -31,9 +34,13 @@ convert non-comment lines directly into `Require not ip` rules for instant block
 
 # turning it into `Require not ip` via bash and powershell
 
+# bash
+
 ```bash
 curl -sL https://github.com | sed -e '/^#/d' -e '/^$/d' -e 's/^/Require not ip /'
 ```
+
+# powershell
 
 ```powershell
 (Invoke-RestMethod https://raw.githubusercontent.com/sealcutlemon-dev/BWB-DB/refs/heads/main/evil-web-bots-db.txt) -split "`n" | Where-Object { $_ -and $_ -notmatch '^#' } | ForEach-Object { "Require not ip $_" }
