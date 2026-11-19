@@ -1,5 +1,5 @@
 # last updated 11/17/2026
-# a guaranteed true positive of 90%, all of those are recently investigated and reported as malicious.
+# an approximate true positive of 90%, all of those are recently investigated and reported as malicious.
 62.109.6.135
 162.62.132.25
 62.113.113.43
